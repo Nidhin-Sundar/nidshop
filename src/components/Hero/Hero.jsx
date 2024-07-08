@@ -52,8 +52,8 @@ const Hero = () => {
         {slides.map((slide, slideIndex) => (
           <div key={slideIndex} className="p-4">
             <img
-              style={{ height: "600px" }}
-              className="w-full rounded-lg object-cover"
+              style={{ height: "800px" }}
+              className="w-full rounded-lg "
               src={slide.img}
               alt={slide.alt}
             />

@@ -1,18 +1,17 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Footer from "./components/Footer/Footer";
-import ProductCard from "./components/ProductCard/ProductCard";
 import Services from "./components/Services/Services";
-import ProductDetails from "./components/ProductDetails/ProductDetails";
+import Categories from "./components/Categories/Categories";
 
 function App() {
   return (
-    <div className="container mx-auto px-4">
+    <div className=" mx-auto ">
       <Navbar />
       <Hero />
-      <ProductCard />
+      <Categories />
       <Services />
-      <ProductDetails />
+
       <Footer />
     </div>
   );
