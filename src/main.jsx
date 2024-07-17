@@ -13,8 +13,12 @@ const allProducts = [
     category: "Dress",
     image: "/src/assets/images/ima1.jpg",
     price: 29.99,
-    description: "Description for Dress 1",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Dress1 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -23,8 +27,12 @@ const allProducts = [
     category: "Dress",
     image: "/src/assets/images/ima2.jpg",
     price: 49.99,
-    description: "Description for Dress 2",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Dress2 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -33,8 +41,12 @@ const allProducts = [
     category: "Dress",
     image: "/src/assets/images/ima3.jpg",
     price: 29.99,
-    description: "Description for Dress 3",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Dress3 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -43,8 +55,12 @@ const allProducts = [
     category: "Dress",
     image: "/src/assets/images/ima4.jpg",
     price: 49.99,
-    description: "Description for Dress 4",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Dress4 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -53,8 +69,12 @@ const allProducts = [
     category: "Dress",
     image: "/src/assets/images/ima5.jpg",
     price: 29.99,
-    description: "Description for Dress 5",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Dress5 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -63,8 +83,12 @@ const allProducts = [
     category: "Dress",
     image: "/src/assets/images/ima6.jpg",
     price: 49.99,
-    description: "Description for Dress 6",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Dress6 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -73,8 +97,12 @@ const allProducts = [
     category: "Mobiles",
     image: "/src/assets/images/ima1.jpg",
     price: 29.99,
-    description: "Description for Mobiles 1",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Mobile1 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -83,8 +111,12 @@ const allProducts = [
     category: "Mobiles",
     image: "/src/assets/images/ima2.jpg",
     price: 49.99,
-    description: "Description for Mobiles 2",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Mobile2 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -93,8 +125,12 @@ const allProducts = [
     category: "Mobiles",
     image: "/src/assets/images/ima3.jpg",
     price: 29.99,
-    description: "Description for Mobiles 3",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Mobile3 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -103,8 +139,12 @@ const allProducts = [
     category: "Mobiles",
     image: "/src/assets/images/ima4.jpg",
     price: 49.99,
-    description: "Description for Mobiles 4",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Mobile4 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -113,8 +153,12 @@ const allProducts = [
     category: "Mobiles",
     image: "/src/assets/images/ima5.jpg",
     price: 29.99,
-    description: "Description for Mobiles 5",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Mobile5 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -123,8 +167,12 @@ const allProducts = [
     category: "Mobiles",
     image: "/src/assets/images/ima6.jpg",
     price: 49.99,
-    description: "Description for Mobiles 6",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Mobile6 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -133,8 +181,12 @@ const allProducts = [
     category: "Laptops",
     image: "/src/assets/images/ima1.jpg",
     price: 29.99,
-    description: "Description for Laptops 1",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Laptops1 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -143,8 +195,12 @@ const allProducts = [
     category: "Laptops",
     image: "/src/assets/images/ima2.jpg",
     price: 49.99,
-    description: "Description for Laptops 2",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Laptops2 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -153,8 +209,12 @@ const allProducts = [
     category: "Laptops",
     image: "/src/assets/images/ima3.jpg",
     price: 29.99,
-    description: "Description for Laptops 3",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Laptops3 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -163,8 +223,12 @@ const allProducts = [
     category: "Laptops",
     image: "/src/assets/images/ima4.jpg",
     price: 49.99,
-    description: "Description for Laptops 4",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Laptops4 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -173,8 +237,12 @@ const allProducts = [
     category: "Laptops",
     image: "/src/assets/images/ima5.jpg",
     price: 29.99,
-    description: "Description for Laptops 5",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Laptops5 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -183,8 +251,12 @@ const allProducts = [
     category: "Laptops",
     image: "/src/assets/images/ima6.jpg",
     price: 49.99,
-    description: "Description for Laptops 6",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Laptops6 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -193,8 +265,12 @@ const allProducts = [
     category: "Shoes",
     image: "/src/assets/images/ima1.jpg",
     price: 29.99,
-    description: "Description for Shoes 1",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Shoes1 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -203,8 +279,12 @@ const allProducts = [
     category: "Shoes",
     image: "/src/assets/images/ima2.jpg",
     price: 49.99,
-    description: "Description for Shoes 2",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Shoes2 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -213,8 +293,12 @@ const allProducts = [
     category: "Shoes",
     image: "/src/assets/images/ima3.jpg",
     price: 29.99,
-    description: "Description for Shoes 3",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Shoes3 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -223,8 +307,12 @@ const allProducts = [
     category: "Shoes",
     image: "/src/assets/images/ima4.jpg",
     price: 49.99,
-    description: "Description for Shoes 4",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Shoes4 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -233,8 +321,12 @@ const allProducts = [
     category: "Shoes",
     image: "/src/assets/images/ima5.jpg",
     price: 29.99,
-    description: "Description for Shoes 5",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Shoes5 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -243,8 +335,12 @@ const allProducts = [
     category: "Shoes",
     image: "/src/assets/images/ima6.jpg",
     price: 49.99,
-    description: "Description for Shoes 6",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Shoes6 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -253,8 +349,12 @@ const allProducts = [
     category: "Earphones",
     image: "/src/assets/images/ima1.jpg",
     price: 29.99,
-    description: "Description for Earphones 1",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Earphones1 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -263,8 +363,12 @@ const allProducts = [
     category: "Earphones",
     image: "/src/assets/images/ima2.jpg",
     price: 49.99,
-    description: "Description for Earphones 2",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Earphones2 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -273,8 +377,12 @@ const allProducts = [
     category: "Earphones",
     image: "/src/assets/images/ima3.jpg",
     price: 29.99,
-    description: "Description for Earphones 3",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Earphones3 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -283,8 +391,12 @@ const allProducts = [
     category: "Earphones",
     image: "/src/assets/images/ima4.jpg",
     price: 49.99,
-    description: "Description for Earphones 4",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Earphones4 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -293,8 +405,12 @@ const allProducts = [
     category: "Earphones",
     image: "/src/assets/images/ima5.jpg",
     price: 29.99,
-    description: "Description for Earphones 5",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Earphones5 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -303,8 +419,12 @@ const allProducts = [
     category: "Earphones",
     image: "/src/assets/images/ima6.jpg",
     price: 49.99,
-    description: "Description for Earphones 6",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Earphones6 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -313,8 +433,12 @@ const allProducts = [
     category: "Bikes",
     image: "/src/assets/images/ima1.jpg",
     price: 29.99,
-    description: "Description for Bikes 1",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Bikes1 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -323,8 +447,12 @@ const allProducts = [
     category: "Bikes",
     image: "/src/assets/images/ima2.jpg",
     price: 49.99,
-    description: "Description for Bikes 2",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Bikes2 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -333,8 +461,12 @@ const allProducts = [
     category: "Bikes",
     image: "/src/assets/images/ima3.jpg",
     price: 29.99,
-    description: "Description for Bikes 3",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Bikes3 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -343,8 +475,12 @@ const allProducts = [
     category: "Bikes",
     image: "/src/assets/images/ima4.jpg",
     price: 49.99,
-    description: "Description for Bikes 4",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Bikes4 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -353,8 +489,12 @@ const allProducts = [
     category: "Bikes",
     image: "/src/assets/images/ima5.jpg",
     price: 29.99,
-    description: "Description for Bikes 5",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Bikes5 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
   {
@@ -363,8 +503,12 @@ const allProducts = [
     category: "Bikes",
     image: "/src/assets/images/ima6.jpg",
     price: 49.99,
-    description: "Description for Bikes 6",
-    features: ["Feature 1", "Feature 2"],
+    description:
+      "This stylish Bikes6 is perfect for a variety of occasions, from casual outings to more formal settings (adjust based on the dress's style). Crafted from high-quality materials (specify materials if available), it's designed to provide both comfort and a flattering silhouette (describe the silhouette if possible).",
+    features: [
+      "[Feature 1]: Briefly explain how this feature enhances the dress's functionality or appeal.",
+      "[Feature 2]: Describe the benefit or advantage of this feature for the user.",
+    ],
     gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
   },
 ];

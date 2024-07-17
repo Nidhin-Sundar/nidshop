@@ -5,8 +5,7 @@ const Categories = () => {
     {
       id: 1,
       name: "Dress",
-      image: "/src/assets/images/ima1.jpg",
-      price: 29.99,
+      image: "/src/assets/images/dress/dress1.jpg",
       description: "Description for Dress",
       features: ["Feature 1", "Feature 2"],
       gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
@@ -14,8 +13,7 @@ const Categories = () => {
     {
       id: 2,
       name: "Mobiles",
-      image: "/src/assets/images/ima2.jpg",
-      price: 49.99,
+      image: "/src/assets/images/mobile/mobile1.jpg",
       description: "Description for Mobiles",
       features: ["Feature 1", "Feature 2"],
       gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
@@ -23,8 +21,7 @@ const Categories = () => {
     {
       id: 3,
       name: "Laptops",
-      image: "/src/assets/images/ima3.jpg",
-      price: 29.99,
+      image: "/src/assets/images/laptops/laptop1.jpg",
       description: "Description for Laptops",
       features: ["Feature 1", "Feature 2"],
       gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
@@ -32,8 +29,7 @@ const Categories = () => {
     {
       id: 4,
       name: "Shoes",
-      image: "/src/assets/images/ima4.jpg",
-      price: 49.99,
+      image: "/src/assets/images/shoes/shoe1.jpg",
       description: "Description for Shoes",
       features: ["Feature 1", "Feature 2"],
       gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
@@ -41,8 +37,7 @@ const Categories = () => {
     {
       id: 5,
       name: "Earphones",
-      image: "/src/assets/images/ima5.jpg",
-      price: 29.99,
+      image: "/src/assets/images/earphones/earphone1.jpg",
       description: "Description for Earphones",
       features: ["Feature 1", "Feature 2"],
       gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
@@ -50,8 +45,7 @@ const Categories = () => {
     {
       id: 6,
       name: "Bikes",
-      image: "/src/assets/images/ima6.jpg",
-      price: 49.99,
+      image: "/src/assets/images/bikes/bike1.jpg",
       description: "Description for Bikes",
       features: ["Feature 1", "Feature 2"],
       gallery: ["/src/assets/images/ima2.jpg", "/src/assets/images/ima3.jpg"],
@@ -59,7 +53,13 @@ const Categories = () => {
   ];
   return (
     <div>
-      <section className="products grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+      <h1
+        className="text-4xl font-bold text-black "
+        style={{ marginLeft: "52rem" }}
+      >
+        Categories
+      </h1>
+      <section className="products grid grid-cols-1 md:grid-cols-6 gap-4 my-8">
         {categories.map((category) => (
           <Link key={category.id} to={`/products/${category.name}`}>
             <div
@@ -75,7 +75,6 @@ const Categories = () => {
                 <h2 className="text-white text-lg font-bold">
                   {category.name}
                 </h2>
-                <p className="text-white">${category.price}</p>
               </div>
             </div>
           </Link>

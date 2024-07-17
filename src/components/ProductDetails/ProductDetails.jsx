@@ -24,24 +24,36 @@ const ProductDetails = ({ allProducts }) => {
           />
         </div>
         <div className="product-info p-4 rounded-lg shadow-md bg-white">
-          <h2 className="text-lg font-bold mb-4">{productData?.name}</h2>
+          <h2 className="font-bold mb-4 text-4xl">{productData?.name}</h2>
           <div className="flex items-center mb-4">
-            <p className="text-black mr-4">Price:</p>
+            <p className="font-bold  text-black text-lg mr-4">Price:</p>
             <span className="text-lg font-bold">
               ${formatPrice(productData?.price)}
             </span>
           </div>
-          <p className="text-black mb-4">{productData?.description}</p>
+          <p className="mt-8 font-bold text-black mb-12">
+            {productData?.description}
+          </p>
           {productData?.features && (
             <>
-              <h3>Features</h3>
-              <ul className="list-disc ml-4">
+              <h3 className="mt-8 font-bold text-black ">Features:</h3>
+              <ul className="list-disc ml-4 mt-4 font-bold text-black">
                 {productData.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
+                  <li className="mt-4" key={feature}>
+                    {feature}
+                  </li>
                 ))}
               </ul>
             </>
           )}
+          <div className="button-container  flex flex-col justify-between mt-60">
+            <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-black">
+              Add to Cart
+            </button>
+            <button className="bg-green-500 text-white px-4 py-2 rounded-md">
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </section>

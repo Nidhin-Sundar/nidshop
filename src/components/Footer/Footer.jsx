@@ -4,9 +4,6 @@ const Footer = () => {
       <p>&copy; {new Date().getFullYear()} NidShop</p>
       <ul className="flex space-x-4 mt-4 md:mt-0">
         <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
           <a href="/about">About Us</a>
         </li>
         <li>
