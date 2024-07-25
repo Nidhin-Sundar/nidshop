@@ -2,7 +2,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Banner/Banner";
 import PromoSection from "./components/PromoSection/PromoSection";
 import PopularProducts from "./components/PopularProducts/PopularProducts";
-import DailyBestDeals from "./components/DailyBestDeals/DailyBestDeals";
+import DailyBestSells from "./components/DailyBestSells/DailyBestSells";
+import DealsofDayList from "./components/DealsofDayList/DealsofDayList";
+import TopSelling from "./components/TopSelling/TopSelling";
+import ShopByCategories from "./components/ShopByCategories/ShopByCategories";
+import BottomBanner from "./components/BottomBanner/BottomBanner";
+import OffersSection from "./components/Offers/OffersSection/OffersSection";
+import Footer from "./components/Footer/Footer";
 
 // import Hero from "./components/Hero/Hero";
 // import Footer from "./components/Footer/Footer";
@@ -21,7 +27,14 @@ function App() {
       <Banner />
       <PromoSection />
       <PopularProducts />
-      <DailyBestDeals />
+      <DailyBestSells />
+
+      <DealsofDayList />
+      <TopSelling />
+      <ShopByCategories />
+      <BottomBanner />
+      <OffersSection />
+      <Footer />
       {/* <Categories /> */}
       {/* <Hero />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

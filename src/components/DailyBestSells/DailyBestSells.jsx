@@ -3,7 +3,7 @@ import { IoCartOutline } from "react-icons/io5";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function DailyBestDeals() {
+export default function DailyBestSells() {
   const settings = {
     dots: false, // Enable navigation dots
     infinite: true, // Enable continuous looping
@@ -77,7 +77,7 @@ export default function DailyBestDeals() {
 
   return (
     <>
-      <div className="mb-16 container mx-auto">
+      <div className="mb-2 container mx-auto">
         <div className="flex flex-row justify-between ">
           <div>
             <h2 className="text-3xl font-bold " style={{ color: "#253D4E" }}>
@@ -249,7 +249,7 @@ export default function DailyBestDeals() {
                         </p>
                         {product.oldPrice && (
                           <p
-                            className="text-sm line-through"
+                            className="ml-3 text-sm line-through"
                             style={{ color: "#adadad" }}
                           >
                             ${product.oldPrice.toFixed(2)}
