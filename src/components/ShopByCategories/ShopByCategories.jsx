@@ -60,7 +60,10 @@ const ShopByCategories = () => {
     },
   ];
   return (
-    <div className="mt-10 container mx-auto mb-10">
+    <div
+      className="mt-10  mb-10"
+      style={{ marginLeft: "10rem", marginRight: "6rem" }}
+    >
       <div className="flex flex-row justify-between mt-4 mb-2 container mx-auto ">
         <div>
           <h2 className="text-3xl font-bold " style={{ color: "#253D4E" }}>

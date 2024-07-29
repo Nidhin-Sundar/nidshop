@@ -77,7 +77,10 @@ export default function DailyBestSells() {
 
   return (
     <>
-      <div className="mb-2 container mx-auto">
+      <div
+        className="mb-2 mt-10 p-4 "
+        style={{ paddingLeft: "10rem", paddingRight: "0rem" }}
+      >
         <div className="flex flex-row justify-between ">
           <div>
             <h2 className="text-3xl font-bold " style={{ color: "#253D4E" }}>

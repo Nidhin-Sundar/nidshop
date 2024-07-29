@@ -44,7 +44,7 @@ export default function Banner() {
               {slides.map((slide, slideIndex) => (
                 <div key={slideIndex} className="relative p-3 rounded-lg ">
                   <img
-                    style={{ height: "600px", width: "90%" }}
+                    style={{ height: "550px", width: "90%" }}
                     className="rounded-3xl ml-24"
                     src={slide.img}
                     alt={slide.alt}
@@ -100,7 +100,7 @@ export default function Banner() {
             <img
               src="/src/assets/images/banner/banner3.png"
               alt="Additional"
-              style={{ height: "600px", width: "80% " }}
+              style={{ height: "550px", width: "80% " }}
               className="rounded-2xl mr-12"
             />
             <div

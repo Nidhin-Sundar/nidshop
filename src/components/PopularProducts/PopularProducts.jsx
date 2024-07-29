@@ -123,7 +123,10 @@ const products = [
 
 export default function PopularProducts() {
   return (
-    <section className="p-8 ml-28 mt-10">
+    <section
+      className="  mt-10"
+      style={{ paddingLeft: "8rem", paddingRight: "5rem" }}
+    >
       <div className="flex flex-row justify-between ">
         <div>
           <h2 className="text-3xl font-bold mb-8" style={{ color: "#253D4E" }}>
@@ -155,7 +158,7 @@ export default function PopularProducts() {
           </button>
         </div>
       </div>
-      <div className="container grid grid-cols-5 gap-4">
+      <div className=" grid grid-cols-5 gap-4">
         {products.map((product, index) => (
           <div
             key={index}

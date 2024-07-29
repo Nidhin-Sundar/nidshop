@@ -65,8 +65,12 @@ export default function DealsofDayList() {
       </div>
 
       <div
-        className="mb-2 container mx-auto gap-4"
-        style={{ marginRight: "11rem", marginBottom: "2rem" }}
+        className="mb-2  gap-4"
+        style={{
+          marginRight: "4rem",
+          marginLeft: "8rem",
+          marginBottom: "2rem",
+        }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 p-4">
           {products.map((product, index) => (
