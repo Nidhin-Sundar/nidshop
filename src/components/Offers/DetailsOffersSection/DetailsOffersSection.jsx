@@ -1,6 +1,6 @@
 import OffersCard from "../OffersCard/OffersCard";
 
-const OffersSection = () => {
+const DetailsOffersSection = () => {
   const categories = [
     {
       img: "/src/assets/images/offers/offers1.svg",
@@ -12,11 +12,7 @@ const OffersSection = () => {
       title: "Free delivery",
       description: "24/7 amazing services",
     },
-    {
-      img: "/src/assets/images/offers/offers3.svg",
-      title: "Great daily deal",
-      description: "When you sign up",
-    },
+
     {
       img: "/src/assets/images/offers/offers4.svg",
       title: "Wide assortment",
@@ -31,7 +27,7 @@ const OffersSection = () => {
 
   return (
     <div className="mt-10 container mx-auto mb-10 px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {categories.map((category, index) => (
           <div key={index}>
             <OffersCard category={category} />
@@ -42,4 +38,4 @@ const OffersSection = () => {
   );
 };
 
-export default OffersSection;
+export default DetailsOffersSection;

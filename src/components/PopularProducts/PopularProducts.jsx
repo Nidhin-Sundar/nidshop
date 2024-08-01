@@ -2,6 +2,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 const products = [
   {
+    id: 1,
     img: "/src/assets/images/products/product1.jpg",
     img2: "/src/assets/images/products/product1.2.jpg",
     title: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
@@ -14,6 +15,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 2,
     img: "/src/assets/images/products/product2.jpg",
     img2: "/src/assets/images/products/product2.2.jpg",
     title: "All Natural Italian-Style Chicken Meatballs",
@@ -25,6 +27,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 3,
     img: "/src/assets/images/products/product3.jpg",
     img2: "/src/assets/images/products/product3.2.jpg",
     title: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
@@ -37,6 +40,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 4,
     img: "/src/assets/images/products/product4.jpg",
     img2: "/src/assets/images/products/product4.2.jpg",
     title: "Foster Farms Takeout Crispy Classic Buffalo Wings",
@@ -49,6 +53,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 5,
     img: "/src/assets/images/products/product5.jpg",
     img2: "/src/assets/images/products/product5.2.jpg",
     title: "Blue Diamond Almonds Lightly Salted Vegetables",
@@ -61,6 +66,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 6,
     img: "/src/assets/images/products/product6.jpg",
     img2: "/src/assets/images/products/product6.2.jpg",
     title: "Chobani Complete Vanilla Greek Yogurt",
@@ -73,6 +79,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 7,
     img: "/src/assets/images/products/product7.jpg",
     img2: "/src/assets/images/products/product7.2.jpg",
     title: "Canada Dry Ginger Ale - 2 L Bottle - 200ml - 400g",
@@ -85,6 +92,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 8,
     img: "/src/assets/images/products/product8.jpg",
     img2: "/src/assets/images/products/product8.2.jpg",
     title: "Encore Seafoods Stuffed Alaskan Salmon",
@@ -97,6 +105,7 @@ const products = [
     brand: "NestFood",
   },
   {
+    id: 9,
     img: "/src/assets/images/products/product9.jpg",
     img2: "/src/assets/images/products/product9.2.jpg",
     title: "Gorton’s Beer Battered Fish Fillets with soft paper",
@@ -109,6 +118,7 @@ const products = [
     brand: "Old El Paso",
   },
   {
+    id: 10,
     img: "/src/assets/images/products/product10.jpg",
     img2: "/src/assets/images/products/product10.2.jpg",
     title: "Hagen-Dazs Caramel Cone Ice Cream Ketchup",
@@ -124,7 +134,7 @@ const products = [
 export default function PopularProducts() {
   return (
     <section
-      className="  mt-10"
+      className="  mt-10 md:px-8 lg:px-12"
       style={{ paddingLeft: "8rem", paddingRight: "5rem" }}
     >
       <div className="flex flex-row justify-between ">
@@ -158,11 +168,11 @@ export default function PopularProducts() {
           </button>
         </div>
       </div>
-      <div className=" grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {products.map((product, index) => (
           <div
             key={index}
-            className="border rounded-2xl p-4 shadow-sm relative"
+            className="border rounded-2xl p-4 shadow-sm relative "
           >
             {product.label && (
               <span
