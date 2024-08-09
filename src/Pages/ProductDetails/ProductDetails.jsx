@@ -1,16 +1,26 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RelatedProducts from "../../components/RelatedProducts/RelatedProducts";
 import DetailsBottomBanner from "../../components/DetailsBottomBanner/DetailsBottomBanner";
 import DetailsOffersSection from "../../components/Offers/DetailsOffersSection/DetailsOffersSection";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import { Link, useParams } from "react-router-dom";
 
-const ProductDetails = () => {
+const ProductDetails = ({ products }) => {
+  const { id } = useParams();
   const [activeTab, setActiveTab] = useState("description");
   const [quantity, setQuantity] = useState(1);
+  const [isAdded, setIsAdded] = useState(false);
+
+  const productData = products?.find((product) => product.id == id);
+
+  useEffect(() => {
+    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+    const existingProduct = cartProducts.find((product) => product.id == id);
+    setIsAdded(!!existingProduct);
+  }, [id]);
 
   const handleIncrement = () => {
     setQuantity(quantity + 1);
@@ -18,6 +28,23 @@ const ProductDetails = () => {
 
   const handleDecrement = () => {
     setQuantity(quantity - 1);
+  };
+
+  const handleAddToCart = () => {
+    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+    const existingProduct = cartProducts.find((product) => product.id == id);
+
+    if (!existingProduct) {
+      cartProducts.push({
+        id: productData.id,
+        title: productData.title,
+        price: productData.price,
+        quantity,
+        image: productData.img,
+      });
+      localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+      setIsAdded(true);
+    }
   };
 
   return (
@@ -29,9 +56,9 @@ const ProductDetails = () => {
           {/* Left Column */}
           <div>
             <img
-              src="/src/assets/images/details/details1.jpg"
+              src={productData?.img}
               alt="Product"
-              className="w-full  border border-gray-200 rounded-3xl"
+              className="w-full border border-gray-200 rounded-3xl"
             />
             <div className="flex space-x-2 mt-4">
               <img
@@ -59,31 +86,28 @@ const ProductDetails = () => {
 
           {/* Right Column */}
           <div className="p-10">
-            <h1 className="text-5xl font-bold " style={{ color: "#253D4E" }}>
-              Seeds of Change Organic Quinoa, Brown
+            <h1 className="text-5xl font-bold" style={{ color: "#253D4E" }}>
+              {productData?.title}
             </h1>
             <p
-              className=" text-6xl font-bold py-12"
+              className="text-6xl font-bold py-12"
               style={{ color: "#3BB77E" }}
             >
-              $38{" "}
+              ${productData?.price}{" "}
               <span
-                className="line-through text-3xl "
+                className="line-through text-3xl"
                 style={{ color: "#7E7E7E" }}
               >
-                $52
+                ${productData?.oldPrice}
               </span>
             </p>
-            <p className="mt-2 " style={{ color: "#7E7E7E" }}>
+            <p className="mt-2" style={{ color: "#7E7E7E" }}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
               rem officia, corrupti reiciendis minima nisi modi, quasi, odio
-              minus dolore impedit fuga eum eligendi.{" "}
+              minus dolore impedit fuga eum eligendi.
             </p>
             <div className="flex items-center gap-10 mt-4 px-6">
-              <div
-                className="flex   
- items-center border border-green-500 rounded-md p-2"
-              >
+              <div className="flex items-center border border-green-500 rounded-md p-2">
                 <span className="text-lg font-bold mx-2">{quantity}</span>
                 <div className="flex flex-col">
                   <button className="text-sm" onClick={handleIncrement}>
@@ -98,13 +122,32 @@ const ProductDetails = () => {
                   </button>
                 </div>
               </div>
-              <button
-                className="  text-white py-2 px-4 rounded-md"
-                style={{ backgroundColor: "#3BB77E" }}
-              >
-                Add to cart
-              </button>
+              {isAdded ? (
+                <Link to="/cart">
+                  <button className="text-white py-2 px-4 rounded-md bg-orange-600">
+                    Go to cart
+                  </button>
+                </Link>
+              ) : (
+                <button
+                  className="text-white py-2 px-4 rounded-md"
+                  style={{ backgroundColor: "#3bb77e" }}
+                  onClick={handleAddToCart}
+                >
+                  Add to cart
+                </button>
+              )}
             </div>
+            <Link to="/">
+              <div>
+                <button
+                  className="text-white py-2 px-12 ml-6 mt-20 rounded-md"
+                  style={{ backgroundColor: "#3bb77e" }}
+                >
+                  Back to Products
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="mt-6 border border-gray-200 p-4 rounded-xl">
@@ -183,100 +226,53 @@ const ProductDetails = () => {
                     <li> Carton</li>
                   </ul>
                 </div>
-                <hr className="my-6" style={{ color: "#7E7E7E" }} />
-                <p className="mt-4" style={{ color: "#7E7E7E" }}>
-                  Laconic overheard dear woodchuck wow this outrageously taut
-                  beaver hey hello far meadowlark imitatively egregiously hugged
-                  that yikes minimally unanimous pouted flirtatiously as beaver
-                  beheld above forward energetic across this jeepers
-                  beneficently cockily less a the raucously that magic upheld
-                  far so the this where crud then below after jeez enchanting
-                  drunkenly more much wow callously irrespective limpet.
-                </p>
-                <h3 className="my-6 text-3xl" style={{ color: "#253D4E" }}>
-                  Packaging & Delivery
-                </h3>
                 <hr className="my-6" />
-                <p className="mt-4 " style={{ color: "#7E7E7E" }}>
-                  Less lion goodness that euphemistically robin expeditiously
-                  bluebird smugly scratched far while thus cackled sheepishly
-                  rigid after due one assenting regarding censorious while
-                  occasional or this more crane went more as this less much amid
-                  overhung anathematic because much held one exuberantly sheep
-                  goodness so where rat wry well concomitantly. Scallop or far
-                  crud plain remarkably far by thus far iguana lewd precociously
-                  and and less rattlesnake contrary caustic wow this near alas
-                  and next and pled the yikes articulate about as less cackled
-                  dalmatian in much less well jeering for the thanks blindly
-                  sentimental whimpered less across objectively fanciful
-                  grimaced wildly some wow and rose jeepers outgrew lugubrious
-                  luridly irrationally attractively dachshund.
-                </p>
-
-                <h3 className="my-6 text-3xl" style={{ color: "#253D4E" }}>
-                  Suggested Use
-                </h3>
-                <hr className="my-6" />
-                <p className="mt-4 " style={{ color: "#7E7E7E" }}>
-                  <ul>
-                    <li>Refrigeration not necessary.</li>
-                    <li> Stir before serving</li>
-                  </ul>
-                </p>
-
-                <h3 className="my-6 text-3xl" style={{ color: "#253D4E" }}>
-                  Other Ingredients
-                </h3>
-                <hr className="my-6" />
-                <p className="mt-4 " style={{ color: "#7E7E7E" }}>
-                  <ul>
-                    <li>Organic raw pecans, organic raw cashews. </li>
-                    <li>
-                      This butter was produced using a LTG (Low Temperature
-                      Grinding) process
-                    </li>
-                    <li>
-                      Made in machinery that processes tree nuts but does not
-                      process peanuts, gluten, dairy or soy
-                    </li>
-                  </ul>
-                </p>
-
-                <h3 className="my-6 text-3xl" style={{ color: "#253D4E" }}>
-                  Warnings
-                </h3>
-                <hr className="my-6" />
-                <p className="mt-4 " style={{ color: "#7E7E7E" }}>
-                  Oil separation occurs naturally. May contain pieces of shell.
+                <p className="mt-6" style={{ color: "#7E7E7E" }}>
+                  Lacinia mollis aliquam ut porttitor leo a diam. Lectus
+                  vestibulum mattis ullamcorper velit sed. Nisl rhoncus mattis
+                  rhoncus urna neque viverra justo nec. Tempor orci dapibus
+                  ultrices in iaculis nunc sed augue. Ipsum dolor sit amet
+                  consectetur adipiscing elit pellentesque habitant morbi.
+                  Sapien faucibus et molestie ac feugiat sed lectus vestibulum
+                  mattis. Nisl purus in mollis nunc sed id semper risus in.
+                  Elementum facilisis leo vel fringilla est ullamcorper eget
+                  nulla. Faucibus pulvinar elementum integer enim neque volutpat
+                  ac tincidunt. Nisl rhoncus mattis rhoncus urna. Id volutpat
+                  lacus laoreet non curabitur gravida.
                 </p>
               </div>
             )}
             {activeTab === "additional-info" && (
               <div>
-                <p className="text-gray-700">
-                  Less lion goodness that euphemistically robin expeditiously
-                  bluebird smugly scratched far while thus cackled sheepishly
-                  rigid after due one assent...
+                <p className="" style={{ color: "#7E7E7E" }}>
+                  Additional information about the product can go here. It might
+                  include specifications, warranty details, and more.
                 </p>
               </div>
             )}
             {activeTab === "vendor" && (
               <div>
-                <p className="text-gray-700">Name: SUPERFOODS</p>
+                <p className="" style={{ color: "#7E7E7E" }}>
+                  Information about the vendor, their reputation, and more
+                  details can be listed here.
+                </p>
               </div>
             )}
             {activeTab === "reviews" && (
               <div>
-                <p className="text-gray-700">25 reviews</p>
+                <p className="" style={{ color: "#7E7E7E" }}>
+                  Customer reviews can be displayed here. Include ratings,
+                  comments, and feedback.
+                </p>
               </div>
             )}
           </div>
         </div>
         <RelatedProducts />
-        <DetailsBottomBanner />
-        <DetailsOffersSection />
-        <Footer />
       </div>
+      <DetailsBottomBanner />
+      <DetailsOffersSection />
+      <Footer />
     </>
   );
 };

@@ -39,7 +39,9 @@ const Navbar = () => {
                   label="Compare"
                 />
                 <NavItem imgSrc="/src/assets/logo/heart.svg" label="Wishlist" />
-                <NavItem imgSrc="/src/assets/logo/cart.svg" label="Cart" />
+                <Link to="/cart">
+                  <NavItem imgSrc="/src/assets/logo/cart.svg" label="Cart" />
+                </Link>
                 <NavItem imgSrc="/src/assets/logo/user.svg" label="Account" />
               </div>
             </div>

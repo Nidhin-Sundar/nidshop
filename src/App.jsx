@@ -10,16 +10,6 @@ import BottomBanner from "./components/BottomBanner/BottomBanner";
 import OffersSection from "./components/Offers/OffersSection/OffersSection";
 import Footer from "./components/Footer/Footer";
 
-// import Hero from "./components/Hero/Hero";
-// import Footer from "./components/Footer/Footer";
-// import Services from "./components/Services/Services";
-// import Categories from "./components/Categories/Categories";
-// import NewArrival from "./components/NewArrival/NewArrival";
-// import TrendingNow from "./components/TrendingNow/TrendingNow";
-// import TopDeals from "./components/TopDeals/TopDeals";
-// import BestPicks from "./components/BestPicks/BestPicks";
-// import Health from "./components/Health/Health";
-
 function App() {
   return (
     <div>
@@ -28,26 +18,12 @@ function App() {
       <PromoSection />
       <PopularProducts />
       <DailyBestSells />
-
       <DealsofDayList />
       <TopSelling />
       <ShopByCategories />
       <BottomBanner />
       <OffersSection />
       <Footer />
-      {/* <Categories /> */}
-      {/* <Hero />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <TopDeals />
-
-        <BestPicks />
-      </div>
-      <Health />
-      <NewArrival />
-      <TrendingNow />
-      <Services />
-
-      <Footer /> */}
     </div>
   );
 }
