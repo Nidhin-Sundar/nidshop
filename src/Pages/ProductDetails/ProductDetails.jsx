@@ -7,14 +7,25 @@ import DetailsOffersSection from "../../components/Offers/DetailsOffersSection/D
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 
-const ProductDetails = ({ products }) => {
+const ProductDetails = () => {
   const { id } = useParams();
+  const [productData, setProductData] = useState(null);
   const [activeTab, setActiveTab] = useState("description");
   const [quantity, setQuantity] = useState(1);
   const [isAdded, setIsAdded] = useState(false);
 
-  const productData = products?.find((product) => product.id == id);
+  useEffect(() => {
+    axios
+      .get(`https://fakestoreapi.com/products/${id}`)
+      .then((response) => {
+        setProductData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching product details:", error);
+      });
+  }, [id]);
 
   useEffect(() => {
     const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
@@ -40,12 +51,16 @@ const ProductDetails = ({ products }) => {
         title: productData.title,
         price: productData.price,
         quantity,
-        image: productData.img,
+        image: productData.image,
       });
       localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
       setIsAdded(true);
     }
   };
+
+  if (!productData) {
+    return <div>Loading...</div>; // Show a loading state while fetching data
+  }
 
   return (
     <>
@@ -56,7 +71,7 @@ const ProductDetails = ({ products }) => {
           {/* Left Column */}
           <div>
             <img
-              src={productData?.img}
+              src={productData?.image}
               alt="Product"
               className="w-full border border-gray-200 rounded-3xl"
             />

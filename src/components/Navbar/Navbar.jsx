@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="flex flex-wrap justify-between items-center p-4 md:p-8 ">
             <div className="flex items-center">
               <img
-                src="/src/assets/logo/logo 1.svg"
+                src="/src/assets/logo/Nid2.png"
                 alt="Nest"
                 className="h-10 md:h-14 ml-4 md:ml-24"
               />
