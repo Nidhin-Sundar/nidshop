@@ -95,7 +95,7 @@ export default function PopularProducts() {
                     />
 
                     <img
-                      className="h-60 mx-auto mb-4 hidden group-hover:block" // Use group-hover for visibility toggle
+                      className="h-60 mx-auto mb-4 hidden group-hover:block"
                       src={product.image}
                       alt={product.title}
                     />

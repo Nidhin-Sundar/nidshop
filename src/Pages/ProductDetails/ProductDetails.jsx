@@ -59,7 +59,7 @@ const ProductDetails = () => {
   };
 
   if (!productData) {
-    return <div>Loading...</div>; // Show a loading state while fetching data
+    return <div>Loading...</div>;
   }
 
   return (
@@ -69,11 +69,11 @@ const ProductDetails = () => {
       <div className="p-4 max-w-[100rem] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Left Column */}
-          <div>
+          <div className="w-[35rem]">
             <img
               src={productData?.image}
               alt="Product"
-              className="w-full border border-gray-200 rounded-3xl"
+              className="w-[35rem] h-[40rem] p-10 border border-gray-200 rounded-3xl"
             />
             <div className="flex space-x-2 mt-4">
               <img
