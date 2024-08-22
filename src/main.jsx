@@ -5,11 +5,17 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
 import Cart from "./Pages/Cart/Cart.jsx";
+import Login from "./components/Login/Login.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+
+  {
+    path: "/login",
+    element: <Login />,
   },
 
   {
