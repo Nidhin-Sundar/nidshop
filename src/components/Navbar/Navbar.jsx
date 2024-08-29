@@ -7,13 +7,29 @@ import BlogDropdown from "../../comp/BlogDropdown";
 import PagesDropdown from "../../comp/PagesDropdown";
 import ShopDropdown from "../../comp/ShopDropdown";
 import { TbCategory } from "react-icons/tb";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userInitial, setUserInitial] = useState("");
+
+  useEffect(() => {
+    const authStatus = localStorage.getItem("isAuthenticated") === "true";
+    setIsAuthenticated(authStatus);
+
+    if (authStatus) {
+      const email = localStorage.getItem("userEmail");
+      if (email) {
+        setUserInitial(email.charAt(0).toUpperCase()); // Get the first letter of the email
+      }
+    }
+  }, []);
+
   return (
     <>
       <div>
-        <div className="bg-white shadow  ">
-          <div className="flex flex-wrap justify-between items-center p-4 md:p-8 ">
+        <div className="bg-white shadow">
+          <div className="flex flex-wrap justify-between items-center p-4 md:p-8">
             <div className="flex items-center">
               <img
                 src="/src/assets/logo/Nid2.png"
@@ -42,12 +58,18 @@ const Navbar = () => {
                 <Link to="/cart">
                   <NavItem imgSrc="/src/assets/logo/cart.svg" label="Cart" />
                 </Link>
-                <NavItem imgSrc="/src/assets/logo/user.svg" label="Account" />
+                {isAuthenticated ? (
+                  <div className="h-10 w-10 rounded-full bg-green-500 text-white flex items-center justify-center text-xl">
+                    {userInitial}
+                  </div>
+                ) : (
+                  <NavItem imgSrc="/src/assets/logo/user.svg" label="Account" />
+                )}
               </div>
             </div>
           </div>
         </div>
-        <div className=" bg-white border-t border-gray-100 sticky top-0">
+        <div className="bg-white border-t border-gray-100 sticky top-0">
           <div className="flex flex-wrap justify-between items-center p-3 md:ml-24">
             <button className="flex items-center text-white px-4 py-2 md:px-8 md:py-3 rounded mr-2 md:mr-4 w-full md:w-64 ml-2 md:ml-4 bg-green-600">
               <TbCategory className="h-6 w-6 mr-2" />
