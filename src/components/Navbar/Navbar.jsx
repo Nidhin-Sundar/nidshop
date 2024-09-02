@@ -8,6 +8,7 @@ import PagesDropdown from "../../comp/PagesDropdown";
 import ShopDropdown from "../../comp/ShopDropdown";
 import { TbCategory } from "react-icons/tb";
 import { useEffect, useState } from "react";
+import Signout from "../SignOut/SignOut";
 
 const Navbar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -66,6 +67,7 @@ const Navbar = () => {
                   <NavItem imgSrc="/src/assets/logo/user.svg" label="Account" />
                 )}
               </div>
+              <Signout />
             </div>
           </div>
         </div>
