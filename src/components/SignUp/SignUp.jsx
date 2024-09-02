@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import bcrypt from "bcryptjs";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +9,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     setError("");
 
@@ -17,13 +18,29 @@ const Signup = () => {
       return;
     }
 
-    const user = {
+    // Retrieve existing users from localStorage
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check if the user already exists
+    const userExists = users.some((user) => user.email === email);
+    if (userExists) {
+      setError("User already exists");
+      return;
+    }
+
+    // Hash the password before storing it
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = {
       email,
-      password,
+      password: hashedPassword,
     };
 
-    // Store the new user in localStorage
-    localStorage.setItem("registeredUser", JSON.stringify(user));
+    // Add the new user to the existing users
+    users.push(newUser);
+
+    // Store the updated users array in localStorage
+    localStorage.setItem("users", JSON.stringify(users));
     alert("Signup successful!");
     navigate("/login");
   };

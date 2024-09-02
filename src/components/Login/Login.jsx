@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import bcrypt from "bcryptjs";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -7,26 +8,31 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
 
-    const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
+    // Retrieve existing users from localStorage
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (
-      registeredUser &&
-      email === registeredUser.email &&
-      password === registeredUser.password
-    ) {
-      localStorage.setItem("isAuthenticated", "true");
-      localStorage.setItem("userEmail", email);
-      alert("Login successful!");
-      navigate("/");
+    // Check if the email and password match any user
+    const user = users.find((user) => user.email === email);
+
+    if (user) {
+      // Compare the entered password with the stored hashed password
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (isMatch) {
+        localStorage.setItem("isAuthenticated", "true");
+        localStorage.setItem("userEmail", email);
+        alert("Login successful!");
+        navigate("/");
+      } else {
+        setError("Invalid credentials");
+      }
     } else {
       setError("Invalid credentials");
     }
   };
-
   return (
     <div className="flex h-screen">
       {/* Image on the left */}
