@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const Signout = () => {
+const Signout = ({ onSignout }) => {
   const navigate = useNavigate();
 
   const handleSignout = () => {
@@ -8,8 +8,11 @@ const Signout = () => {
     localStorage.removeItem("isAuthenticated");
     localStorage.removeItem("userEmail");
 
+    // Call the onSignout callback to update the Navbar state
+    onSignout();
+
     // Redirect to login page
-    navigate("/login");
+    navigate("/");
   };
 
   return (

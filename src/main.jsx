@@ -7,6 +7,7 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
 import Cart from "./Pages/Cart/Cart.jsx";
 import Login from "./components/Login/Login.jsx";
 import SignUp from "./components/SignUp/SignUp.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element: <Cart />,
+    element: (
+      <PrivateRoute>
+        <Cart />
+      </PrivateRoute>
+    ),
   },
 ]);
 

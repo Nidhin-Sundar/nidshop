@@ -26,6 +26,11 @@ const Navbar = () => {
     }
   }, []);
 
+  const handleSignout = () => {
+    setIsAuthenticated(false);
+    setUserInitial("");
+  };
+
   return (
     <>
       <div>
@@ -64,10 +69,16 @@ const Navbar = () => {
                     {userInitial}
                   </div>
                 ) : (
-                  <NavItem imgSrc="/src/assets/logo/user.svg" label="Account" />
+                  <NavItem imgSrc="/src/assets/logo/user.svg" />
                 )}
               </div>
-              <Signout />
+              {isAuthenticated ? (
+                <Signout onSignout={handleSignout} />
+              ) : (
+                <Link to="/login" className="text-green-600">
+                  Login
+                </Link>
+              )}{" "}
             </div>
           </div>
         </div>
