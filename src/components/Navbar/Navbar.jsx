@@ -96,7 +96,11 @@ const Navbar = () => {
               <VendorsDropdown />
               <BlogDropdown />
               <PagesDropdown />
-              <NavItem label="Contact" />
+              <NavItem label="Contact">
+                <Link to="/contact" className="text-green-600">
+                  Contact
+                </Link>
+              </NavItem>
             </div>
             <div className="flex items-center justify-between ml-4 md:ml-80 mt-4 md:mt-0">
               <img src="/src/assets/logo/headphone.svg" alt="headphone" />
