@@ -53,7 +53,7 @@ const ContactForm = () => {
 
       <div className="hidden lg:block">
         <img
-          src="https://images.pexels.com/photos/7709287/pexels-photo-7709287.jpeg?auto=compress&cs=tinysrgb&w=700&h=400"
+          src="https://images.pexels.com/photos/7709287/pexels-photo-7709287.jpeg?auto=compress&cs=tinysrgb&w=900&h=400"
           alt="contact"
           className="rounded-md shadow-lg"
         />

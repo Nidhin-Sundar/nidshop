@@ -9,6 +9,7 @@ import Login from "./components/Login/Login.jsx";
 import SignUp from "./components/SignUp/SignUp.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import Contact from "./Pages/Contact/Contact.jsx";
+import About from "./Pages/About/About.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
   },
 
   { path: "/contact", element: <Contact /> },
+  { path: "/about", element: <About /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
