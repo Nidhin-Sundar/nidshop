@@ -9,17 +9,15 @@ import Footer from "../../components/Footer/Footer";
 
 const Cart = () => {
   const userEmail = localStorage.getItem("userEmail");
-  if (!userEmail) {
-    console.error("User email not found. Cannot retrieve cart.");
-  }
+  const cartKey = `cartProducts_${userEmail}`; // Create a unique cart key
 
   const [products, setProducts] = useState(() => {
-    const savedProducts = localStorage.getItem("cartProducts");
+    const savedProducts = localStorage.getItem(cartKey);
     return savedProducts ? JSON.parse(savedProducts) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem("cartProducts", JSON.stringify(products));
+    localStorage.setItem(cartKey, JSON.stringify(products)); // Save products to local storage
   }, [products]);
   const handleIncrement = (id) => {
     setProducts(

@@ -16,6 +16,9 @@ const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
   const [isAdded, setIsAdded] = useState(false);
 
+  const userEmail = localStorage.getItem("userEmail"); // Make sure this is set when the user logs in
+  const cartKey = `cartProducts_${userEmail}`;
+
   useEffect(() => {
     axios
       .get(`https://fakestoreapi.com/products/${id}`)
@@ -28,10 +31,10 @@ const ProductDetails = () => {
   }, [id]);
 
   useEffect(() => {
-    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+    const cartProducts = JSON.parse(localStorage.getItem(cartKey)) || [];
     const existingProduct = cartProducts.find((product) => product.id == id);
     setIsAdded(!!existingProduct);
-  }, [id]);
+  }, [id, cartKey]);
 
   const handleIncrement = () => {
     setQuantity(quantity + 1);
@@ -42,7 +45,7 @@ const ProductDetails = () => {
   };
 
   const handleAddToCart = () => {
-    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+    const cartProducts = JSON.parse(localStorage.getItem(cartKey)) || [];
     const existingProduct = cartProducts.find((product) => product.id == id);
 
     if (!existingProduct) {
@@ -53,7 +56,7 @@ const ProductDetails = () => {
         quantity,
         image: productData.image,
       });
-      localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+      localStorage.setItem(cartKey, JSON.stringify(cartProducts));
       setIsAdded(true);
     }
   };

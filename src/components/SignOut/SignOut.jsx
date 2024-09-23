@@ -7,6 +7,7 @@ const Signout = ({ onSignout }) => {
     // Clear authentication data
     localStorage.removeItem("isAuthenticated");
     localStorage.removeItem("userEmail");
+    localStorage.removeItem("cartProducts");
 
     // Call the onSignout callback to update the Navbar state
     onSignout();
